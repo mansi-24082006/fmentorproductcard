@@ -98,6 +98,7 @@
   
   #mobileImg {
     display: none;
+    visibility: hidden;
   }
   
   @media screen and (min-width: 900px) {
@@ -106,12 +107,13 @@
     }
   }
   
-  @media screen and (max-width: 670px) {
+  @media screen and (max-width: 800px) {
     .container {
       width: 350px;
       flex-direction: column;
       max-width: 90%;
       margin: 20px 0;
+      height: 700px;
     }
   
     .left-container,
@@ -138,9 +140,14 @@
   
     #desktopImg {
       display: none;
+      visibility: hidden;
     }
   
     #mobileImg {
       display: block;
+      visibility: visible;
+    }
+    button{
+        visibility: visible;
     }
   }
