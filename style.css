@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  body {
+    font-family: Montserrat, "sans-serif";
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+  }
+  
+  .container {
+    display: flex;
+    width: 750px;
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .left-container,
+  .right-container {
+    width: 50%;
+  }
+  
+  .left-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .right-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15spx;
+    background-color: white;
+  }
+  
+  .right-container h3 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+  }
+  
+  .right-container h1 {
+    font-family: Fraunces, "sans-serif";
+    font-size: 2.7rem;
+  }
+  
+  .right-container p.content {
+    color: hsl(228, 12%, 48%);
+  }
+  
+  .price-section {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  p.discount-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: Fraunces, "sans-serif";
+    color: hsl(158, 36%, 37%);
+  }
+  
+  p.real-price {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: 17px;
+  }
+  
+  button {
+    padding: 12px 0;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #mobileImg {
+    display: none;
+  }
+  
+  @media screen and (min-width: 900px) {
+    button:hover {
+      background-color: hsl(158, 40%, 16%);
+    }
+  }
+  
+  @media screen and (max-width: 670px) {
+    .container {
+      width: 350px;
+      flex-direction: column;
+      max-width: 90%;
+      margin: 20px 0;
+    }
+  
+    .left-container,
+    .right-container {
+      width: 100%;
+    }
+  
+    .left-container {
+      height: 250px;
+    }
+  
+    .right-container {
+      gap: 20px;
+      padding: 15px;
+    }
+  
+    .right-container h1 {
+      font-size: 2rem;
+    }
+  
+    p.discount-price {
+      font-size: 1.8rem;
+    }
+  
+    #desktopImg {
+      display: none;
+    }
+  
+    #mobileImg {
+      display: block;
+    }
+  }
